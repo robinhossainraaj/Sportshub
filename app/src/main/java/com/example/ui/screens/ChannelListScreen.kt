@@ -249,8 +249,8 @@ fun ChannelListItemRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .border(1.5.dp, BorderAccent, RoundedCornerShape(12.dp))
-            .background(BgCard, RoundedCornerShape(12.dp))
+            .border(1.dp, Color(0xFF303342), RoundedCornerShape(16.dp))
+            .background(BgCard, RoundedCornerShape(16.dp))
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongClick
@@ -263,7 +263,7 @@ fun ChannelListItemRow(
             model = channel.logoUrl.ifEmpty { "https://raw.githubusercontent.com/robinhossainraaj/rorax-iptv-database/main/assets/ic_channel.png" },
             contentDescription = channel.name,
             modifier = Modifier
-                .size(52.dp)
+                .size(48.dp)
                 .clip(CircleShape)
                 .background(CircleBg),
             contentScale = ContentScale.Crop
