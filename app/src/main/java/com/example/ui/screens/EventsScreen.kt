@@ -367,8 +367,12 @@ fun CategoryItem(
                 modifier = Modifier
                     .fillMaxSize()
                     .border(
-                        width = 1.5.dp,
-                        color = if (isSelected) BorderAccent else Color(0xFF33343D),
+                        width = 1.dp,
+                        color = if (isSelected) BorderAccent else Color(0xFF343644),
+                        shape = CircleShape
+                    )
+                    .background(
+                        color = if (isSelected) Color(0xFF252D59) else CircleBg,
                         shape = CircleShape
                     ),
                 contentAlignment = Alignment.Center
@@ -521,10 +525,10 @@ fun MatchCardItem(event: SofaScoreEvent) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 14.dp, vertical = 5.dp)
-            .border(2.dp, BorderAccent, RoundedCornerShape(16.dp))
+            .border(1.dp, Color(0xFF303342), RoundedCornerShape(18.dp))
             .testTag("match_card_${event.id}"),
         colors = CardDefaults.cardColors(containerColor = BgCard),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(18.dp)
     ) {
         Box(modifier = Modifier.fillMaxWidth()) {
             
