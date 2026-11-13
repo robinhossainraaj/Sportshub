@@ -51,8 +51,8 @@ fun DrawerContent(
     Column(
         modifier = Modifier
             .fillMaxHeight()
-            .fillMaxWidth()
-            .background(Color.Black)
+            .width(300.dp)
+            .background(Color(0xFF15161D))
             .padding(16.dp)
             .verticalScroll(rememberScrollState())
             .testTag("app_drawer")
