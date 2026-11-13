@@ -120,11 +120,11 @@ fun CategoriesScreen(
                 val grouped = state.data.groupBy { it.category }
 
                 LazyVerticalGrid(
-                    columns = GridCells.Fixed(3),
+                    columns = GridCells.Adaptive(104.dp),
                     modifier = Modifier.fillMaxSize(),
                     contentPadding = PaddingValues(14.dp),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     grouped.forEach { (catName, playlists) ->
                         item {
@@ -159,8 +159,8 @@ fun CategoryGridCard(
 
     Column(
         modifier = Modifier
-            .border(2.dp, BorderAccent, RoundedCornerShape(16.dp))
-            .background(BgCard, RoundedCornerShape(16.dp))
+            .border(1.dp, Color(0xFF303342), RoundedCornerShape(18.dp))
+            .background(BgCard, RoundedCornerShape(18.dp))
             .clickable(onClick = onClick)
             .padding(top = 14.dp, bottom = 12.dp, start = 6.dp, end = 6.dp)
             .testTag("category_card_${name.lowercase().replace(" ", "_")}"),
