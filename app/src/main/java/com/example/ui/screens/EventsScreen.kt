@@ -370,8 +370,7 @@ fun CategoryItem(
                         width = 1.5.dp,
                         color = if (isSelected) BorderAccent else Color(0xFF33343D),
                         shape = CircleShape
-                    )
-                    .background(CircleBg, CircleShape),
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
